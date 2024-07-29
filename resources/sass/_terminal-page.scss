@@ -1,0 +1,700 @@
+.terminal {
+    background-color: white;
+    .section-display {
+        width: 100%;
+        background-color: #efefef;
+
+        .display-holder {
+            padding: 20px;
+            padding-top: 5px;
+
+            .display-header {
+                background-color: white;
+                padding: 15px;
+                border-radius: 5px;
+                margin-bottom: 20px;
+
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+
+                
+
+                .header-txt {
+                    line-height: 25px;
+                }
+
+                .d-head-text {
+                    font-size: 25px;
+                    text-transform: uppercase;
+                    font-weight: 500;
+                    color: darkslategrey;
+                }
+
+                .d-sub-text {
+                    font-size: 15px;
+                    text-transform: uppercase;
+                    font-weight: 500;
+                    color: darkslategrey;
+                }
+            }
+
+            .header-search {
+                display: flex;
+                height: 40px;
+                width: 300px;
+                background-color: #efefef;
+                // border: solid 1px black;
+
+                .search-form {
+                    border: none;
+                    width: 100%;
+                    padding: 5px 10px;
+                    background-color: #efefef;
+
+                    &:focus {
+                        border: none;
+                        outline: none;
+                    }
+                }
+                
+                .search-btn {
+                    height: 100%;
+
+                    .fa-search {
+
+                    }
+                }
+            }
+
+            .display-container {
+                box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+            }
+
+            .display-body {
+
+                .transaction-holder {
+                    display: flex;
+                }
+
+                .transaction-card {
+                    width: 100%;
+                    height: 100%;
+                    background-color: white;
+                    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+
+                    .card-head {
+                        display: flex;
+                        align-items: center;
+                        background-color: #0a3d62;
+                        padding: 10px 20px;
+                        justify-content: space-between;
+
+                        .head-title {
+                            color: white;
+                            font-size: 16px;
+                            text-transform: uppercase;
+                            font-weight: 600;
+                        }
+
+                        .icon-title {
+                            color: white;
+                            font-size: 22px;
+                            font-weight: 600;
+                        }
+                    }
+
+                    .card-body {
+                        background-color: white;
+                        padding: 20px;
+
+
+                        .customer-image {
+                            margin-bottom: 10px;
+                        }
+
+                        .card-body-text {
+                            color: darkslategrey;
+                            font-size: 16px;
+                            text-transform: uppercase;
+                            font-weight: 600;
+                        }
+
+                        .customer-info-holder {
+                            text-align: center;
+                        }
+
+                        .transaction-buttons {
+                            display: flex;
+                            margin-top: 10px;
+                        }
+
+                        .btn {
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+
+                            .fa {
+                                font-size: 20px;
+                                margin-right: 10px;
+                            }
+                        }
+
+                        .btn-red {
+                            width: 100%;
+                            max-width: 150px;
+                            border: 3px solid indianred;
+                            color: white;
+                            font-size: 16px;
+                            font-weight: 700;
+                            background-color: indianred;
+                            
+
+                            &:hover {
+                                background-color:  white;
+                                color: indianred;
+                                
+                            }
+                        }
+
+                        .btn-green {
+                            width: 100%;
+                            border: 3px solid seagreen;
+                            color:white;
+                            font-size: 16px;
+                            font-weight: 700;
+                            background-color:seagreen;
+                           
+
+                            margin-right: 10px;
+
+                            &:hover {
+                                background-color:  white;
+                                color:seagreen;
+                               
+                            }
+                        }
+                    }
+
+                    .order-body {
+                        display: flex;
+                        flex-direction: column;
+                        height: 100%;
+                        justify-content: space-between;
+                    }
+                }
+
+                .card-customer {
+                    max-width: 350px;
+                    margin-right: 15px;
+                }
+
+                .card-cashier {
+                    max-width: 100%;
+                }
+
+                .transaction-info-holder {
+
+                    .accordion-table-head {
+                        display: flex;
+                        justify-content: space-between;
+                        background-color: #848484;
+                        padding: 10px 0;
+                        margin-bottom: 10px;
+                        
+                        .accordion-label {
+                            display: flex;
+
+                            .accordion-label-txt {
+                                color: white;
+                                font-size: 15px;
+                                text-transform: uppercase;
+                                font-weight: 600;
+                                line-height: 18px;
+                            }
+
+                            .lbl-no {
+                                width: 100px;
+                                text-align: center;
+                            }
+
+                            .lbl-total {
+                                width: 110px;
+                            }
+                        }
+                    }
+
+                    .history-card {
+                        border: solid 1px gainsboro;
+
+                        &:nth-child(odd) {
+                            .history-card-header {
+                                background-color: white;
+                            }
+                         }
+
+                        .history-card-header {
+                            display: flex;
+                            align-items: center;
+                            justify-content: space-between;
+                            background-color: #f1f1f1;
+                            padding: 10px 15px;
+
+                            
+
+                            .header-details {
+                                display: flex;
+                                align-items: center;
+
+                                .count-holder {
+                                    display: flex;
+                                    justify-content: center;
+                                    align-items: center;
+                                    margin-right: 10px;
+                                    border-right: 2px solid darkgray;
+                                    padding-right: 10px;
+                                    width: 80px;
+
+                                    .count-txt {
+                                        font-size: 14px;
+                                    }
+                                }
+
+                                .total-holder {
+                                    background-color: white;
+                                    padding: 10px 0;
+                                    width: 80px;
+                                    text-align: center;
+                                    border-radius: 10px;
+                                    margin-right: 10px;
+                                    border: solid 1px gainsboro;
+                                }
+                            }
+                        }     
+
+                        .card-body {
+                            border-top: 1px solid gainsboro;
+
+                            .record-txt {
+                                line-height: 22px;
+                                font-size: 15px;
+                            }
+                        }
+
+                        .record-txt {
+                            color: darkslategrey;
+                            font-size: 18px;
+                            text-transform: uppercase;
+                            font-weight: 600;
+                            line-height: 18px;
+                        }
+
+                        .record-name {
+                            font-size: 15px;
+                        }
+
+                        .record-id {
+                            font-size: 12px;
+                        }
+
+                        .toggle-trigger {
+                            padding: 10px;
+                            font-size: 20px;
+
+                            &:hover {
+                                cursor: pointer;
+                                background-color: darkgray;
+                            }
+                        }
+                    }
+
+                    .accordion-pagination {
+                        display: flex;
+                        justify-content: flex-end;
+                        margin-top: 15px;
+
+                        .pagination-holder {
+                            display: flex;
+
+                            .pagination-label {
+                                border: solid 1px darkgray;
+                                margin-right: 5px;
+                                padding: 5px 8px;
+                                height: 35px;
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
+                                font-weight: 700;
+                                color: darkslategrey;
+
+                                &:hover {
+                                    cursor: pointer;
+                                    background-color: lightgray;
+                                    color: darkslategrey;
+                                }
+
+                                &-active {
+                                    background-color: gray;
+                                    color: white;
+                                    border: solid 1px gray;
+                                }
+                            }
+                        }
+                    }
+                }
+
+                // .customer-info-container {
+                //     width: 100%;
+                //     max-width: 260px;
+                //     background-color: white;
+                //     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+                //     // border-radius: 20px;
+
+                //     .customer-holder {
+
+                //         .customer-details {
+                //             padding: 20px;
+
+                //             .customer-txt {
+                //                 font-size: 16px;
+                //                 text-transform: uppercase;
+                //                 font-weight: 700;
+                //                 color: rgb(82, 92, 92);
+                //                 text-align: center;
+                //             }
+                //         }
+                //     }
+                // }
+
+                // .info-header {
+                //     display: flex;
+                //     justify-content: space-between;
+                //     padding: 10px 20px;
+                //     background-color: #0a3d62;
+                //     align-items: center;
+
+                //     .info-header-title {
+                //         color: white;
+                //         font-size: 16px;
+                //         text-transform: uppercase;
+                //         font-weight: 600;  
+                //     }
+                // }
+            }
+        }
+
+        .total-label {
+            font-size: 20px;
+            text-align: center;
+        }
+
+        .total-price-txt {
+            font-size: 200px;
+            text-align: center;
+            margin-top: -50px;
+        }
+    }
+
+    .input-amount {
+        text-align: center;
+        font-size: 185px;
+    }
+
+    .group-customer {
+        margin-bottom: 0!important;
+    }
+
+    .input-customer {
+        text-align: center;
+        font-size: 20px;
+        text-transform: uppercase;
+        font-weight: 600;
+        border: none;
+    }
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+-webkit-appearance: none;
+margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+-moz-appearance: textfield;
+}
+
+.terminal1 {
+    height: 100vh;
+    background-color: #bdd4e7;
+    background-image: linear-gradient(315deg, #bdd4e7 0%, #8693ab 74%);
+
+
+    .terminal-container {
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .terminal-holder {
+        width: 100%;
+        display: flex;
+        height: 500px;
+
+        box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+
+        .user-details {
+            width: 40%;
+            background-color: lightgrey;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+
+            .image-holder {
+                // margin-top: 30px;
+                width: 100%;
+                max-width: 280px;
+            }
+
+            .details-holder {
+                text-align: center;
+                line-height: 25px;
+                margin-top: 15px;
+
+                .user-name {
+                    font-size: 25px;
+                    text-transform: capitalize;
+                }
+
+                .user-id {
+                    font-size: 20px;
+                }
+            }
+        }
+
+        .transaction-details {
+            width: 60%;
+            border: solid 1px lightgray;
+            background-color: white;
+
+            padding: 30px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            .transaction-holder {
+                width: 100%;
+            }
+
+            .input-label {
+                font-size: 25px;
+                text-align: center;
+                text-transform: capitalize;
+            }
+
+            .input-amount {
+                text-align: center;
+                font-size: 150px;
+                box-shadow: 0 3px 6px rgb(0 0 0 / 16%), 0 3px 6px rgb(0 0 0 / 23%);
+            }
+
+            .button-transaction {
+                margin-top: 20px;
+                display: flex;
+
+                .btn-primary {
+                    width: 80%;
+                    margin-right: 10px;
+                }
+
+                .btn-secondary {
+                    width: 20%;
+                }
+            }
+
+            .confirm-modal {
+                @media (min-width: 576px) {
+                    .modal-dialog {
+                        max-width: 700px;
+                        margin: 1.75rem auto;
+                    }
+                }
+                
+                
+
+                .rfidSecondScan {
+                    width: 10px;
+                    text-align: center;
+                    font-size: 1px;
+                    color: transparent;
+                    border: solid 1px transparent;
+                    background: transparent;
+                }
+
+                .rfidSecondScan:focus, .rfidSecondScan:focus, .rfidSecondScan[type]:focus, .uneditable-input:focus {   
+                    border-color: transparent;
+                    // box-shadow: 0 1px 1px rgba(229, 103, 23, 0.075) inset, 0 0 8px rgba(229, 103, 23, 0.6);
+                    outline: 0 none;
+                }
+
+                .second-rfid {
+                    padding: 0;
+
+                    .top-div {
+                        position: relative;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        flex-direction: column;
+                        background-color: #00b894;
+                        height: 280px;
+
+                        .rfid-icon {
+                            transform: rotate(90deg);
+                            width: 280px;
+                            margin-left: -40px;
+                        }
+
+                        .close-btn {
+                            position: absolute;
+                            top: 15px;
+                            right: 15px;
+                            border: solid 1px white;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            height: 30px;
+                            width: 30px;
+                            border-radius: 20px;
+
+                            .fa-times {
+                                color: white;
+                                font-size: 20px;
+                            }
+                        }
+
+                        .close-btn:hover {
+                            background-color: white;
+
+                            .fa-times {
+                                color: #00b894;
+                            }
+                        }
+
+                        // .fa {
+                        //     color: white;
+                        //     font-size: 120px;
+                        // }
+                    }
+
+                    .bottom-div {
+                        .confirmation-text {
+                            text-align: center;
+                            margin-top: 15px;
+                            line-height: 40px;
+                            padding: 40px;
+
+                            .confirm-title {
+                                font-size: 50px;
+                                text-transform: capitalize;
+                            }
+
+                            .confirm-text {
+                                font-size: 25px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+.scan-first-main {
+    height: 100vh;
+    background-color: #537895;
+background-image: linear-gradient(315deg, #537895 0%, #09203f 74%);
+
+    // background-color: #9921e8;
+    // background-image: linear-gradient(315deg, #0984e3 0%, #0a3d62 74%);
+
+    .container {
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .card-rfid {
+            // border: solid 1px grey;
+        width: 700px;
+        border: solid 1px gray;
+        padding-top: 30px;
+        background-color: white;
+        border-radius: 20px;
+
+        box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+
+        .top-card {
+            // height: 300px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            .rfid-icon {
+                width: 100%;
+                max-width: 360px;
+                // transform: rotate(90deg);
+            }
+        }
+
+        .bottom-card {
+            // height: 100px;
+
+            .rfid-title {
+                text-align: center;
+                font-size: 30px;
+                font-weight: 700;
+            }
+
+            .rfid-search-form {
+                .rfdiSearch-input {
+                    width: 10px;
+                    text-align: center;
+                    font-size: 1px;
+                    color: transparent;
+                    border: solid 1px transparent;
+                }
+
+                .rfdiSearch-input:focus, .rfdiSearch-input:focus, .rfdiSearch-input[type]:focus, .uneditable-input:focus {   
+                    border-color: transparent;
+                    // box-shadow: 0 1px 1px rgba(229, 103, 23, 0.075) inset, 0 0 8px rgba(229, 103, 23, 0.6);
+                    outline: 0 none;
+                }
+            }
+        }
+    }
+
+    .credit-holder {
+        text-align: center;
+        color: white;
+        margin-top: 15px;
+        line-height: 20px;
+        position: relative;
+
+        .esc-info {
+            background-color: #ffffff26;
+            position: absolute;
+            padding: 0 20px!important;
+            bottom: -25px;
+            right: 90px;
+        }
+    }
+}

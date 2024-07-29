@@ -1,0 +1,125 @@
+.login-page {
+
+    height: 100vh;
+            display: flex;
+            align-items: center;
+        
+            /* background-color: #045de9;
+        background-image: linear-gradient(315deg, #045de9 0%, #09c6f9 74%); */
+        background-color: #9921e8;
+        background-image: linear-gradient(315deg, #0984e3 0%, #0a3d62 74%);
+        /* background-color: #eec0c6;
+        background-image: linear-gradient(315deg, #eec0c6 0%, #7ee8fa 74%); */
+
+    p {
+        padding: 0;
+        margin: 0;
+        }
+        
+        textarea:focus, input:focus{
+            outline: none;
+        }
+        
+        .app-logo {
+            width: 100%;
+            max-width: 250px;
+        }
+    
+        
+        .login-holder {
+            display: flex;
+            width: 100%;
+            justify-content: center;
+        }
+        
+        .form-holder {
+            height: 500px;
+            width: 100%;
+            max-width: 850px;
+            display: flex;
+            box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+        }
+        
+        .login-img-container {
+            width: 100%;
+            max-width: 50%;
+            background-image: url("/cps/resources/assets/canteen.jpg");
+            background-size: cover;
+            background-position: center;
+            position: relative;
+        }
+        
+        .login-form-container {
+            width: 100%;
+            max-width: 50%;
+            background-color: white;
+        }
+        
+        .img-overlay {
+            width: 100%;
+            max-width: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            background-color: darkgray ; /*cornflowerblue*/
+            opacity: .5;
+        }
+        
+        .input-label {
+            font-size: 14px;
+            color: slategrey;
+            text-transform: uppercase;
+        }
+        
+        .input-textbox-login {
+            font-size: 16px;
+            width: 100%;
+            border: none;
+            background-color: #cad4d8;
+            padding: 5px 10px;
+            margin-bottom: 15px;
+        }
+        
+        .login-form-holder {
+            padding: 30px 50px;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+        }
+        
+        .login-btn {
+            background-color: cornflowerblue;
+            color: white;
+            text-transform: uppercase;
+            width: 100%;
+            font-size: 16px;
+            font-weight: 500;
+            border: solid 2px cornflowerblue;
+        }
+        
+        .login-btn:hover {
+            color: cornflowerblue;
+            background-color: white;
+            border: solid 2px cornflowerblue;
+        }
+        
+        .login-logo-holder {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+        
+        .credit-text {
+            text-align: center;
+            font-size: 12px;
+            line-height: 15px;
+        }
+        
+        .login-credits-holder {
+            margin-top: 20px;
+        }
+        
+        
+}

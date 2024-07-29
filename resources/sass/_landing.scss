@@ -1,0 +1,149 @@
+.landing {
+    background-color:#95afc0; 
+    // background-color: #cedfe9; #c9d1d6 c9d1d6
+    height: 100vh;
+
+    .container {
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .card-wrapper {
+        padding-top: 20px;
+
+        .rfid-card {
+            width: 830px;
+            height: 450px;
+            background-color: white;
+            background-image: linear-gradient(to right, white 0%, white 35%, #c3dbdc 35%, #c3dbdc 100%);
+            border-radius: 15px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+            transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            margin-bottom: 20px;
+
+            &:hover {
+                cursor: pointer;
+                box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+            }
+
+            .upper-card {
+                padding: 15px;
+                display: flex;
+                justify-content: space-between;
+                
+                .img-logo {
+                    height: 90px;
+                }
+
+                .card-login {
+                    padding: 15px 15px 0 0!important;
+                    color: #29292973;
+                    font-size: 18px;
+                    font-weight: 600;
+                    height: max-content;
+
+                    &:hover {
+                        color: black;
+                        
+                    }
+                }
+            }
+
+            .lower-card {
+                padding: 20px;
+                padding-bottom: 0;
+                border-bottom: solid 12px #5b89a7;
+                margin-bottom: 40px;
+
+                .card-project {
+                    color: #29292973;
+                    font-size: 40px;
+                    font-weight: 600;
+                }
+            }
+        }
+
+        .credit-text {
+            text-align: center;
+            font-size: 12px;
+            line-height: 15px;
+        }
+
+        .rfid-card span{
+            display: inline-flex;
+        
+        }
+        
+        .rfid-card span:nth-child(even){
+            overflow: hidden;
+            transition: ease-in-out 0.5s;
+            letter-spacing: -1em;
+        }
+        
+        .rfid-card:hover span:nth-child(even){
+            letter-spacing: 0;
+            cursor: pointer;
+        }
+        
+        .rfid-card:hover span:nth-child(2){
+            transition-delay: 0s;
+        
+        }
+        
+        .rfid-card:hover span:nth-child(4){
+            transition-delay: 0.5s;
+        
+        }
+        
+        .rfid-card:hover span:nth-child(6){
+            transition-delay: 1s;
+        }
+
+
+    }
+
+    .modal {
+        .modal-dialog {
+            max-width: 400px;
+
+            .login-container {
+                padding: 30px;
+                position: relative;
+
+                .close-btn {
+                    background: white;
+                    border: none;
+                    color: darkgray;
+                    position: absolute;
+                    top: 10px;
+                    right: 15px;
+                    font-size: 20px;
+                }
+
+                .login-label {
+                    font-size: 20px;
+                    text-align: center;
+                    font-weight: 600;
+                    color: #535b63;
+                }
+
+                .input-wrapper {
+                    margin-bottom: 15px;
+                    .login-textbox {
+                        margin-top: 15px;
+                    }
+                }
+
+                .login-btn {
+                    width: 100%;
+                }
+            }
+        }
+    }
+}

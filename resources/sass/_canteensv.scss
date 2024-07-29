@@ -1,0 +1,55 @@
+.canteen-sv {
+    padding-top: 100px;
+    padding-bottom: 50px;
+
+    .card {
+        margin-bottom: 30px;
+        border-radius: 0;
+        border: solid 1px #454d55; 
+
+        .card-header {
+            background-color: #454d55;
+            color: white;
+            border-radius: 0;
+        }
+
+        .card-body {
+            padding: 5px;
+
+            .info-holder {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+
+                .box-info {
+                    border: solid 1px grey;
+                    width: 100%;
+                    margin: 8px;
+                    padding: 10px;
+                    position: relative;
+                    text-align: center;
+
+                    .box-title {
+                        font-weight: 600;
+                        font-size: 18px;
+                        border-top: solid 1px grey;
+                        margin-top: 5px!important;
+                        padding-top: 5px!important;
+                    }
+
+                    .box-value {
+                        font-size: 30px;
+                    } 
+                }
+            }
+        }
+    }
+
+    .dataTables_wrapper {
+        border-radius: 0;
+    }
+
+    .sv-table {
+        border: solid 2px #454d55; 
+    }
+}

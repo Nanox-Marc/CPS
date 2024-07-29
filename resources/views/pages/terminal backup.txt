@@ -1,0 +1,201 @@
+@extends('layouts.app')
+
+@section('content')
+<a class="dropdown-item" href="{{ route('logout') }}"
+onclick="event.preventDefault();
+                document.getElementById('logout-form').submit();">
+{{ __('Logout') }}
+</a>
+
+<form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+@csrf
+</form>
+    <main class="terminal">
+
+        <div class="section-display">
+            <div class="display-holder">
+               
+                <div class="display-body">
+                    
+                    <form class="transaction-holder" id="transaction-form" method="post" action="{{ route('transaction.store') }}">
+                        @csrf
+    
+                        <div class="form-group hide">
+                            <label for="canteen"> Canteen </label>
+                            <input type="text" name="canteen" class="form-control" id="canteen" required>
+                        </div>
+                
+                        <script>
+                            var canteen = Math.floor(Math.random() * 10);
+                            if(canteen % 2 == 0) {
+                                document.getElementById("canteen").value = "DREDS";
+                            }
+                            else {
+                                document.getElementById("canteen").value = "RPC";
+                            }
+                        </script>
+                
+                        <div class="form-group hide">
+                            <label for="cashierId"> Cashier ID </label>
+                            <input type="text" name="cashierId" class="form-control" id="cashierId" value="000001" required>
+                        </div>
+    
+                        <div class="form-group hide">
+                            <label for="date"> Date </label>
+                            <input type="text" name="date" class="form-control" id="date" required>
+                        </div>
+                
+                        <script>
+                            var d = new Date();
+                            var n = d.toLocaleDateString();
+                            document.getElementById("date").value = n;
+                        </script>
+                
+                        <div class="form-group hide">
+                            <label for="time"> Time </label>
+                            <input type="text" name="time" class="form-control" id="time" required>
+                        </div>
+                
+                        <script>
+                            // function startTime() {
+                              var today = new Date();
+                              var h = today.getHours();
+                              var m = today.getMinutes();
+                              var s = today.getSeconds();
+                              m = checkTime(m);
+                              s = checkTime(s);
+                              document.getElementById('time').value =
+                              h + ":" + m;
+                              var t = setTimeout(startTime, 500);
+                            // }
+                            function checkTime(i) {
+                              if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
+                              return i;
+                            }
+                        </script>
+    
+                        {{-- customer card --}}
+                        <div class="transaction-card card-customer">
+                            <div class="card-head">
+                                <p class="head-title">Customer Details</p>
+                                <i class="fa fa-user-circle icon-title" aria-hidden="true"></i>
+                            </div>
+                            <div class="card-body">
+                                <div class="customer-info-holder">
+                                    <img class="img-fluid customer-image" src="{{URL::asset('resources/assets/user-placeholder.png')}}" />
+                                    <div class="form-group group-customer">
+                                    <input type="hidden" name="employeeRfid" class="form-control input-customer" placeholder="Name" id="employeeRfid" value="{{$rfidNo ?? ''}}" required>
+                                    </div>
+                                    <div class="form-group group-customer">
+                                        <input type="text" name="employeeName" class="form-control input-customer" placeholder="Name" id="employeeName" autofocus required>
+                                    </div>
+                                    <div class="form-group group-customer">
+                                        <input type="text" name="employeeId" class="form-control input-customer" placeholder="Employee ID" id="employeeId" required>
+                                    </div>
+                                    <div class="form-group group-customer">
+                                        <input type="text" name="rfidConfirm" id="rfidConfirm" class="form-control input-customer" placeholder="Tap RFID to continue . . ." onkeypress="submitValid()" autofocus >
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+    
+                        {{-- cashier card --}}
+                        <div class="transaction-card card-cashier">
+                            <div class="card-head">
+                                <p class="head-title">Order Details</p>
+                                <i class="fa fa-money icon-title" aria-hidden="true"></i>
+                            </div>
+                            <div class="card-body order-body">
+                                <div class="transaction-data">
+                                    
+                                    <div class="total-price-holder">
+                                        <p class="total-label">TOTAL AMOUNT:</p>
+                                        <div class="form-group">
+                                            <input type="text" name="amount" class="form-control input-amount" id="amount" placeholder="0.00" autocomplete="off" autofocus required>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="transaction-buttons">
+                                    <button type="submit" class="btn btn-green" onclick="submitValid()">
+                                        <i class="fa fa-check-circle" aria-hidden="true"></i> ENTER
+                                    </button>
+                                    <button class="btn btn-red" onclick="clearForm()">
+                                        <i class="fa fa-trash" aria-hidden="true"></i> CLEAR
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                
+            </div>
+    
+            <script>
+         
+                var msg = '{{Session::get('alert')}}';
+                var exist = '{{Session::has('alert')}}';
+                
+
+                if(exist){
+                    Swal.fire(
+                    'DONE',
+                    'A ticket was successfully created!',
+                    'success'
+                    )    
+                } 
+
+                
+        
+                function submitValid() {
+                    var Description;
+                    vCanteen = document.getElementById("canteen").value;
+                    vEmpId = document.getElementById("employeeId").value;
+                    vAmount = document.getElementById("amount").value;
+        
+                    if (vCanteen == "" || vEmpId == "" || vAmount == "") {
+                        Swal.fire(
+                        'ERROR',
+                        'Please fill up all required details at the form!',
+                        'error'
+                        )
+                        return false;
+                    }
+                    return true;
+                }
+    
+                function clearForm() {
+                    document.getElementById("transaction-form").reset();
+                }
+        
+            </script>
+    
+        </div>
+    
+        
+    </main>
+
+    {{-- <script>
+
+        $(document).ready( function () {
+                // register jQuery extension
+            jQuery.extend(jQuery.expr[':'], {
+                focusable: function (el, index, selector) {
+                    return $(el).is('#employeeId');
+                }
+            });
+
+            $(document).on('keypress', 'input,select', function (e) {
+                if (e.which == 13) {
+                    e.preventDefault();
+                    // Get all focusable elements on the page
+                    var $canfocus = $(':focusable');
+                    var index = $canfocus.index(document.activeElement) + 1;
+                    if (index >= $canfocus.length) index = 0;
+                    $canfocus.eq(index).focus();
+                }
+            });
+        } );
+
+        
+    </script> --}}
+@endsection

@@ -1,0 +1,43 @@
+.logs-page {
+    padding-top: 60px;
+    
+
+    .logs-container {
+        margin-top: 50px;
+        margin-bottom: 100px;
+    }
+
+    .table-logs {
+        
+
+        .cell-small {
+            width: 150px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+        .cell-big {
+            width: 100%;
+        }
+
+        .head-row {
+            background-color: dimgray;
+            color: white;
+        }
+
+        .custom-row {
+            margin-bottom: 5px;
+            display: flex;
+        }
+
+        th {
+            border: solid 1px gray;
+        }
+
+        td {
+            border: solid 1px gray;
+        }
+    }
+}
